@@ -16,7 +16,7 @@ body{
     text-align: center;
 }
 .underline{
-    background-color: rgb (100, 92, 255);
+    background-color: rgb(100,92, 255);
     width: 7rem;
     height: 0.25rem;
     margin: auto;
@@ -46,7 +46,7 @@ body{
 }
 .img{
     width: 100%;
-    height: 200px;
+    height: 20rem;
     object-fit: cover;
     border-radius: 0.25rem;
 }
@@ -75,14 +75,69 @@ p{
 }
 @media screen and (min-width: 768px)
 {
-    .menu-item{grid-template-columns: 225px 1fr;
+    .menu-item{
+    grid-template-columns: 225px 1fr;
     gap: 1.25rem;
     }
 }
-@media screen and (min-width: 992px){
-    .item-container{grid-template-columns: 1fr 1fr;
-        
+@media screen and (min-width: 992px)
+{
+    .item-container{
+    grid-template-columns: 1fr 1fr;
     }
-    .menu-item{grid-template-columns: 1fr;}
-    .img{ height: 150px; width: 250px;}
+    .menu-item{
+    grid-template-columns: 1fr;
+    }
+    .img{
+    height: 150px; width: 250px;
+    }
+}
+/*
+span{
+    content: "\20A6";
+}    
+*/
+/* Cart contents modification*/
+.cart{
+    position: center;
+    display: block;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    gap: 1rem;
+    font-size: 20;
+    font-weight: bold;
+    border-radius: 0.25rem;
+}
+/*Changing the cart color when clicked on/hovered */
+.cart:hover {
+    opacity: 0.5;
+    background-color: green;
+    color: black;
+}
+.footnote{
+    background-color: black;
+    color: white;
+    line-height: 1.5;
+}
+.logo{
+    border-radius: 0.25rem;
+    /*padding: 0.25rem 0.25rem;*/
+}
+@keyframes James{
+    from {
+    rotate: 0deg;
+    transform: rotate(0deg);
+    }
+    to {
+    rotate: 0deg;
+    transform: rotate(35deg);
+    }
+}
+.cart{
+    animation-name: James;
+    animation-duration: 10s;
+    rotate: 35;
+    animation-iteration-count: 2;
+    animation-timing-function:ease-in;
 }
